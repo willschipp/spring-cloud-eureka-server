@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eureka-example
+spec:
+  selector:
+    matchLabels:
+      app: eureka-example
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: eureka-example
+    spec:
+      containers:
+        - name: eureka-example
+          image: ghcr.io/willschipp/spring-cloud-eureka-server:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: regcred
