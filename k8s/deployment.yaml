@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: eureka-example
+  name: sba-example
 spec:
   selector:
     matchLabels:
-      app: eureka-example
+      app: sba-example
   replicas: 1
   template:
     metadata:
       labels:
-        app: eureka-example
+        app: sba-example
     spec:
       containers:
-        - name: eureka-example
-          image: ghcr.io/willschipp/spring-cloud-eureka-server:latest
+        - name: sba-example
+          image: ghcr.io/willschipp/spring-sba-server:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080

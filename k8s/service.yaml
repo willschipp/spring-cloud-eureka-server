@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata: 
-  name: eureka-example-service
+  name: sba-example-service
 spec:
   selector:
-    app: eureka-example
+    app: sba-example
   ports:
     - protocol: "TCP"
       port: 8080
