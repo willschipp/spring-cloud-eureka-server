@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: sba-example
-          image: ghcr.io/willschipp/spring-sba-server:latest
-          imagePullPolicy: IfNotPresent
+          image: ghcr.io/willschipp/spring-sba-k8s-server:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
       imagePullSecrets:

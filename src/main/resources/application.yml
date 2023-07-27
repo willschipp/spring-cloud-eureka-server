@@ -1,6 +1,15 @@
 spring:
   application:
     name: spring-boot-admin
+  boot:
+    admin:
+      discovery:
+        ignored-services: "kubernetes,kube-dns"
+  cloud:
+    kubernetes:
+      discovery:
+        all-namespaces: true
+        include-not-ready-addresses: true
 
 management:
   endpoints:
